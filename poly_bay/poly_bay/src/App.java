@@ -15,7 +15,7 @@ public class App {
 
         ArrayList<Product> produits = dao.findAll();
 
-        System.out.println(produits);
+        System.out.println(produits.toString());
         
         System.out.println("Hello, Worl2!");
 
