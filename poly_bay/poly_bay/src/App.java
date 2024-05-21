@@ -1,3 +1,5 @@
+import java.sql.Statement;
+
 import database.PolyBayDatabase;
 
 public class App {
@@ -7,6 +9,13 @@ public class App {
 
 
         PolyBayDatabase poly_bay = new PolyBayDatabase();
+        
+        poly_bay.connect()
+        
+        Statement statement = poly_bay.createStatement();
+
+
+
 
 
 
