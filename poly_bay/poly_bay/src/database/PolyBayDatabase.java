@@ -8,7 +8,7 @@ public class PolyBayDatabase extends MySQLDatabase{
     public PolyBayDatabase() throws SQLException{
 
     
-        super("localhost",3306,"poly_bay","poly_bay","poly_bay");
+        super("127.0.0.1",3306,"poly_bay","poly_bay","poly_bay");
 
     }
 

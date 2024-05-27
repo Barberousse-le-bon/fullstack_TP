@@ -1,9 +1,11 @@
 package DAO;
 import models.Product;
+import webserver.WebServerContext;
+
 import java.util.ArrayList;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
+
 
 import database.PolyBayDatabase;
 
@@ -18,7 +20,7 @@ public class ProductsDAO {
     }
 
 
-    public ArrayList<Product> findAll(){
+    public ArrayList<Product> findAll(WebServerContext context){
     	ArrayList<Product> produits=new ArrayList<>();
         
     	
@@ -48,7 +50,9 @@ public class ProductsDAO {
     			
     			
     		}
-    		
+			System.out.println("aaaaaaaaaaa");
+			System.out.println(produits);
+    		context.getResponse().json(produits);
     	}
     	catch(Exception e) {
     		

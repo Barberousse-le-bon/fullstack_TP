@@ -40,7 +40,7 @@ public class MySQLDatabase {
 
     private void connect() throws SQLException {
         MySQLDatabase.initialize();
-        this.connection = DriverManager.getConnection(String.format("jdbc:mysql://%s:%d/%s?allowMultiQueries=true", this.host, this.port, this.databaseName), user, password);
+        this.connection = DriverManager.getConnection(String.format("jdbc:mysql://%s:%d/%s", this.host, this.port, this.databaseName), user, password);
     }
 
     public PreparedStatement prepareStatement(String sqlQuery) throws SQLException
